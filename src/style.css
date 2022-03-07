@@ -1,0 +1,72 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  letter-spacing: -0.3px;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+
+header {
+  height: 5em;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  background: linear-gradient(120deg, #3d3d3d 80%, #c5c5c5 80%);
+  color: #ffffff;
+}
+
+section {
+  display: flex;
+}
+
+section .list-container {
+  width: 30%;
+  height: 30em;
+  /* border: 1px solid gray; */
+  margin: 1em;
+  background-color: #ffffff;
+  border-radius: 1em;
+}
+
+section .list-container .tag {
+  border-radius: 1em;
+  width: 4em;
+  text-align: center;
+  padding: 0.3em 0.5em;
+  margin: 1em;
+}
+
+section .list-container ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+section .list-container ul li {
+  padding: 0.5em;
+}
+
+.item-add {
+  padding: 1.5em 0;
+  text-align: center;
+  border: 1px solid lightgray;
+  margin: 0 0.5em;
+  border-radius: 1em;
+  color: lightgray;
+  font-size: 1.5em;
+}
+
+.todo {
+  background-color: gold;
+}
+
+.doing {
+  background-color: #87bd63;
+}
+
+.done {
+  background-color: #ffb6b6;
+}
