@@ -110,3 +110,9 @@ section .list-container ul li {
 .display-flex {
   display: flex;
 }
+
+.remove-item {
+  border: 0;
+  background-color: transparent;
+  color: red;
+}

@@ -15,7 +15,6 @@ document.querySelector('#button-add').addEventListener('click', (event) => {
 
   todos.push({ id: randomId, label: todoLabel.value, content: todoContent.value });
 
-  console.log(todos);
   todoRender();
 
   todoLabel.value = 'todo';
@@ -29,10 +28,22 @@ function todoRender() {
   todos.map((todo) => {
     const listEl = document.querySelector(`#${todo.label}`);
     const liEl = document.createElement('li');
-    const textNode = document.createTextNode(todo.content);
-    liEl.appendChild(textNode);
+    liEl.innerText = todo.content;
+
+    const buttonEl = document.createElement('button');
+    buttonEl.innerText = "X";
+    buttonEl.className = "remove-item";
+    buttonEl.value = todo.id;
+    liEl.append(buttonEl);
+
     listEl.append(liEl);
   });
+
+  document.querySelectorAll('.remove-item').forEach(el => {
+    el.addEventListener('click', (e) => {
+      removeTodo(e.target.value);
+    })
+  })
 }
 
 function clearTodoList() {
@@ -40,4 +51,9 @@ function clearTodoList() {
     const listEl = document.querySelector(`#${label}`);
     listEl.innerHTML = '';
   });
+}
+
+function removeTodo(id) {
+  todos = todos.filter((todo) => todo.id !== id);
+  todoRender();
 }
