@@ -7,57 +7,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
 </head>
+
 <body>
   <header>
     <h1>Board</h1>
+    <button id="add-item">추가</button>
   </header>
   <section>
     <div class="list-container">
       <div class="tag todo">할 일</div>
       <div>
-        <div class="item-add">+</div>
-        <ul>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
+        <ul id="todo">
         </ul>
       </div>
     </div>
     <div class="list-container">
       <div class="tag doing">진행중</div>
       <div>
-        <div class="item-add">+</div>
-        <ul>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
+        <ul id="doing">
         </ul>
       </div>
     </div>
     <div class="list-container">
       <div class="tag done">완료</div>
       <div>
-        <div class="item-add">+</div>
-        <ul>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
-          <li>TODO</li>
+        <ul id="done">
         </ul>
       </div>
     </div>
   </section>
+  <div id="container-dialog-add" class="dialog-backdrop">
+    <div class="dialog-add">
+      <h2>TODO 추가</h2>
+      <label for="todo-label">상태</label>
+      <select name="todo-label" id="todo-label">
+        <option value="todo">할 일</option>
+        <option value="doing">진행중</option>
+        <option value="done">완료</option>
+      </select>
+      <br>
+      <label for="todo-content">내용</label>
+      <input type="text" name="todo-content" id="todo-content">
+      <br>
+      <button id="button-add" type="submit">추가</button>
+    </div>
+  </div>
 </body>
 
 </html>
